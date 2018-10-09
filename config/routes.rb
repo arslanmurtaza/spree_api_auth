@@ -4,8 +4,7 @@ Spree::Core::Engine.add_routes do
     resource :users do
         #resource :v1 do
         member do
-            puts("estoy en el router")
-          post :sign_up
+          #post :sign_up
           post :sign_in
         end
     #end
