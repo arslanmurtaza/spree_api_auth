@@ -1,8 +1,8 @@
 module Spree
   module Api
 
-      #class UsersController < Spree::Api::V1::UsersController
-      Spree::Api::V1::UsersController.class_eval do
+      class UsersController < Spree::Api::V1::UsersController 
+      #Spree::Api::UsersController.class_eval do
         before_action :authenticate_user, :except => [:sign_up, :sign_in]
   
         def sign_up
@@ -22,7 +22,7 @@ module Spree
         end
   
         def sign_in
-          #puts("hola")
+          puts("hola controller")
           @user = Spree::User.find_by_email(params[:user][:email])
           if !@user.present? || !@user.valid_password?(params[:user][:password])
             unauthorized
