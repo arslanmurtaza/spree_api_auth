@@ -22,7 +22,7 @@
       end
 
       def sign_in
-        puts("hola controller")
+        #puts("hola controller")
         @user = Spree::User.find_by_email(params[:user][:email])
         if !@user.present? || !@user.valid_password?(params[:user][:password])
           unauthorized

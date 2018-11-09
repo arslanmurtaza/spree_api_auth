@@ -7,7 +7,6 @@ Spree::Core::Engine.add_routes do
         #resource :v1 do
         member do
           #post :sign_up
-          print("Hola routes")
           post :sign_in
         end
       #end
