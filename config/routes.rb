@@ -8,6 +8,7 @@ Spree::Core::Engine.add_routes do
         member do
           #post :sign_up
           post :sign_in
+          post :register
         end
       #end
     end

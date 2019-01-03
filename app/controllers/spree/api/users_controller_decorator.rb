@@ -3,7 +3,7 @@
 
     class Spree::Api::UsersController < Spree::Api::BaseController#Spree::Api::V1::UsersController 
     #Spree::Api::V1::UsersController.class_eval do
-      before_action :authenticate_user, :except => [:sign_up, :sign_in]
+      before_action :authenticate_user, :except => [:register, :sign_in]
 
       def register
 
