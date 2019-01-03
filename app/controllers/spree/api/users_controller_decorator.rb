@@ -5,7 +5,7 @@
     #Spree::Api::V1::UsersController.class_eval do
       before_action :authenticate_user, :except => [:sign_up, :sign_in]
 
-      def sign_up
+      def register
 
         @user = Spree::User.find_by_email(params[:user][:email])
 
